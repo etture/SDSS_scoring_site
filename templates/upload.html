@@ -1,0 +1,22 @@
+<html>
+
+<body>
+    <h2>YBIGTA ML 프로젝트 데이터 채점</h2>
+    <h4>submission CSV 파일을 형식에 맞춰 업로드해주세요. (팀 선택 필수)</h4>
+    <h4>에러가 나면 파일 형식이 잘못된 겁니다..!</h4>
+    <form action="http://localhost:5000/fileUpload"
+          method="POST"
+          enctype="multipart/form-data">
+          <select name="team">
+              <option value="null" disabled SELECTED>팀 선택</option>
+              <option value="1">1팀</option>
+              <option value="2">2팀</option>
+              <option value="3">3팀</option>
+          </select>
+        <input type="file"
+               name="file" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
