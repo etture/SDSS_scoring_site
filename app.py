@@ -110,4 +110,4 @@ def get_score(sub_file, ground_truth_filename='./ybigta_validate_full.pickle'):
 
 if __name__ == '__main__':
     # 서버 실행
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
