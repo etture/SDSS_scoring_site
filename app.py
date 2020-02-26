@@ -18,7 +18,8 @@ def upload_file():
     if request.method == 'POST':
         file = request.files['file']
         team = request.form.get('team')
-        print('team: ', type(team))
+        print('team: ', team)
+        print('file: ', file.filename)
         # 저장할 경로 + 파일명
         upload_directory = os.path.join(os.path.dirname(__file__), 'upload')
         file_abspath = os.path.join(
@@ -68,7 +69,7 @@ def upload_file():
                 <h4>점수: {score}</h4>'''
 
 
-@app.route('/getLeaderboard_abcdefg', methods=['GET', 'POST'])
+@app.route('/getLeaderboard_abcdefg', methods=['GET'])
 def get_leaderboard():
     if not os.path.exists('scores.pickle'):
         return 'no leaderboard created'
