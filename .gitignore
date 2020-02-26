@@ -1,4 +1,4 @@
 upload
 previous
-*.pickle
+scores.pickle
 .vscode
